@@ -1,0 +1,29 @@
+%head
+  %link{:rel => "stylesheet", :href => "/main.css", :type => "text/css"}
+  %title Tom Wey / Software Developer
+%body
+  #profile
+    #title= "Tom Wey"
+    #subtitle= "Software Developer"
+    #email= "tjmwey [at] gmail [dot] com"
+    #nav
+      %span
+        %a{:href => "/"}home
+      %span /
+      %span
+        %a{:href => "/work"}work
+      %span /
+      %span
+        %a{:href => "/links"}links
+    =yield
+  #footer
+    %span
+      Copyright &copy; 2011 Tom Wey /
+    %span
+      This website built on
+    %span
+      %a{:href => "http://www.sinatrarb.com"} Sinatra
+    %span
+      and
+    %span
+      %a{:href => "http://www.heroku.com"} Heroku

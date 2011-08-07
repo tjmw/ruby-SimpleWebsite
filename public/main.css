@@ -1,0 +1,37 @@
+body {  
+    font-family: georgia, serif;
+    font-size: 48px;
+    padding: 0;
+    margin: 5% 10% 5% 10%;
+}
+
+a {
+    text-decoration: none;
+    color: LightSlateGrey;
+}
+
+#email {
+    font-size: 32px;
+    color: CadetBlue;
+}
+
+#nav {
+    font-size: 32px;
+    color: DarkSlateGrey;
+    padding: 5pt 0;
+}
+
+#content {
+    font-size: 32px;
+    padding: 14pt 0;
+}
+
+#other {
+    font-size: 20px;
+    padding: 14pt 0;
+}
+
+#footer {
+    font-size: 14px;
+    padding-top: 12pt;
+}

@@ -1,0 +1,2 @@
+require 'simplewebsite'
+run SimpleWebsite
