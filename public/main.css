@@ -10,6 +10,11 @@ a {
     color: LightSlateGrey;
 }
 
+a.current {
+    text-decoration: underline;
+    color: LightSlateGrey;
+}
+
 #email {
     font-size: 32px;
     color: CadetBlue;

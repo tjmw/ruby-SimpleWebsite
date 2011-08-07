@@ -8,13 +8,13 @@
     #email= "tjmwey [at] gmail [dot] com"
     #nav
       %span
-        %a{:href => "/"}home
+        %a{:class => current == "index" ? "current" : "non-current", :href => "/"}home
       %span /
       %span
-        %a{:href => "/work"}work
+        %a{:class => current == "work" ? "current" : "non-current", :href => "/work"}work
       %span /
       %span
-        %a{:href => "/links"}links
+        %a{:class => current == "links" ? "current" : "non-current", :href => "/links"}links
     =yield
   #footer
     %span
