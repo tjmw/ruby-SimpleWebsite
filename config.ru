@@ -1,2 +1,2 @@
-require 'simplewebsite'
+require './simplewebsite'
 run SimpleWebsite
