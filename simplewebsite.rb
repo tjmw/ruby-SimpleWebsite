@@ -37,5 +37,6 @@ class SimpleWebsite < Sinatra::Base
         else
             response_headers = Net::HTTP.get_response(uri).to_hash
             body "<pre>#{response_headers.to_yaml}</pre>"
+        end
     end
 end
