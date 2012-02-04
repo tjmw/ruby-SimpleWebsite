@@ -35,7 +35,10 @@ class SimpleWebsite < Sinatra::Base
         rescue
             body "<pre>invalid uri</pre>"
         else
-            req = Net::HTTP::Head.new(url.path)
+            path = url.path
+            req = Net::HTTP::Head.new(
+                path.nil? || path.empty? ? '/' : path
+            )
             res = Net::HTTP.start(url.host, url.port) {|http|
                 http.request(req)
             }
