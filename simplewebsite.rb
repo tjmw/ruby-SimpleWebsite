@@ -31,6 +31,10 @@ class SimpleWebsite < Sinatra::Base
 
     get '/showmetheheaders' do
         begin
+            if params[:url].nil? || params[:url].empty?
+                raise "No url specified"
+            end
+
             url = URI.parse(params[:url])
         rescue
             body "<pre>invalid url</pre>"
