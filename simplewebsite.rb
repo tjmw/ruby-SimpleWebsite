@@ -31,12 +31,15 @@ class SimpleWebsite < Sinatra::Base
 
     get '/showmetheheaders' do
         begin
-            uri = URI.parse(params[:url])
+            url = URI.parse(params[:url])
         rescue
             body "<pre>invalid uri</pre>"
         else
-            response_headers = Net::HTTP.get_response(uri).to_hash
-            body "<pre>#{response_headers.to_yaml}</pre>"
+            req = Net::HTTP::Head.new(url.path)
+            res = Net::HTTP.start(url.host, url.port) {|http|
+                http.request(req)
+            }
+            body "<pre>#{res.to_hash.to_yaml}</pre>"
         end
     end
 end
