@@ -33,7 +33,7 @@ class SimpleWebsite < Sinatra::Base
         begin
             url = URI.parse(params[:url])
         rescue
-            body "<pre>invalid uri</pre>"
+            body "<pre>invalid url</pre>"
         else
             path = url.path
             req = Net::HTTP::Head.new(
