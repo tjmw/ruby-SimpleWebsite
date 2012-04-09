@@ -7,6 +7,7 @@ require 'uri'
 
 class SimpleWebsite < Sinatra::Base
     set :root, File.dirname(__FILE__)
+
     attr_reader :current
 
     get '/' do
